@@ -12,7 +12,7 @@ const Logo = () => {
         <img 
           src="https://cdn.websparks.ai/3_MisBD-d38e52cc.png" 
           alt="Miss Bangladesh Logo" 
-          className="h-12 md:h-14 drop-shadow-lg"
+          className="h-14 md:h-14 drop-shadow-lg"
         />
         <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-secondary/20 to-primary/0 rounded-full blur-sm -z-10"></div>
       </div>

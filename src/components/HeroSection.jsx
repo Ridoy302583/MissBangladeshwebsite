@@ -50,7 +50,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 drop-shadow-lg">
-              Miss Bangladesh Foundation
+              Become the Next Miss Bangladesh
             </h1>
           </motion.div>
           
@@ -60,7 +60,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
-              Become the Next Miss Bangladesh
+              Miss Bangladesh Foundation
             </p>
           </motion.div>
           

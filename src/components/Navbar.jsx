@@ -35,15 +35,15 @@ const Navbar = () => {
     { name: 'NEWS', path: '/news' },
     { name: 'T&C', path: '/terms-conditions' },
     { name: 'CONTACT', path: '/contact' },
-    { name: 'MISS EARTH', path: '/miss-earth' },
+    { name: 'MISS EARTH', path: 'http://www.missearth.tv/' },
   ];
 
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-gradient-to-r from-primary/95 to-dark/95 shadow-lg py-2 backdrop-blur-sm' 
-          : 'bg-gradient-to-r from-black/40 to-primary/40 py-4 backdrop-blur-sm'
+          ? 'bg-white shadow-lg py-2' 
+          : 'bg-white py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -55,6 +55,10 @@ const Navbar = () => {
           >
             <Link to="/" className="flex items-center">
               <Logo />
+              <div className="ml-3">
+                <h1 className="text-lg font-serif font-bold text-[#8C1D40]">Miss Bangladesh</h1>
+                <p className="text-xs text-[#FFC627]">Beauty Pageant</p>
+              </div>
             </Link>
           </motion.div>
 
@@ -69,17 +73,17 @@ const Navbar = () => {
               >
                 <Link
                   to={link.path}
-                  className={`nav-link px-3 py-2 rounded-md ${
+                  className={`px-3 py-2 rounded-md font-medium ${
                     location.pathname === link.path 
-                      ? 'text-secondary font-semibold' 
-                      : 'text-white hover:bg-white/10'
+                      ? 'text-[#FFC627] font-semibold' 
+                      : 'text-[#8C1D40] hover:text-[#FFC627]'
                   }`}
                 >
                   <span className="relative">
                     {link.name}
                     {location.pathname === link.path && (
                       <motion.span 
-                        className="absolute -bottom-1 left-0 w-full h-0.5 bg-secondary"
+                        className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#FFC627]"
                         layoutId="navbar-underline"
                       />
                     )}
@@ -94,7 +98,7 @@ const Navbar = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden text-white focus:outline-none bg-primary/50 hover:bg-primary/70 p-2 rounded-full backdrop-blur-sm"
+            className="md:hidden text-[#8C1D40] focus:outline-none bg-gray-100 hover:bg-gray-200 p-2 rounded-full"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -110,7 +114,7 @@ const Navbar = () => {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-gradient-to-b from-primary/95 to-dark/95 backdrop-blur-md border-t border-white/10"
+          className="md:hidden bg-white border-t border-gray-200"
         >
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-2">
@@ -123,10 +127,10 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`nav-link block px-4 py-3 rounded-md ${
+                    className={`block px-4 py-3 rounded-md ${
                       location.pathname === link.path 
-                        ? 'bg-white/10 text-secondary font-semibold' 
-                        : 'text-white hover:bg-white/5'
+                        ? 'bg-gray-100 text-[#FFC627] font-semibold' 
+                        : 'text-[#8C1D40] hover:text-[#FFC627] hover:bg-gray-50'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
