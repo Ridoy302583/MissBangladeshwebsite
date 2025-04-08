@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import Header1 from '../Assets/header1.png';
 // Combined team members data from both files
 const teamMembers = [
   {
@@ -46,7 +46,16 @@ const Teams = () => {
   return (
     <div className="bg-gradient-to-b from-amber-50 to-amber-100 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-amber-700 text-white py-24 relative">
+      <div className="bg-amber-700 text-white py-16 md:py-24 relative relative mt-8">
+        <div 
+          className="absolute inset-0 z-0 opacity-70" 
+          style={{
+            backgroundImage: `url(${Header1})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div

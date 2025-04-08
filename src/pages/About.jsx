@@ -1,12 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Meghna from '../Assets/meghna.jpg';
-
+import Header1 from '../Assets/header1.png';
 const About = () => {
   return (
     <div>
       <div className="bg-primary text-white py-32 relative">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-20"></div>
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-80" 
+          style={{
+            backgroundImage: `url(${Header1})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
+        {/* <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-20"></div> */}
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

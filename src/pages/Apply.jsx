@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Logo from '../components/Logo';
+import Header1 from '../Assets/header1.png';
 
 const ApplicationForm = () => {
   const [sameAddress, setSameAddress] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-50">
+      
       {/* Header */}
-      <header className="bg-white shadow-md py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+      <header className="relative bg-pink-500 text-white shadow-md py-6">
+        
+        <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
           <Logo />
           <div className="text-right">
-            <h2 className="text-primary font-serif font-bold">Beauty Pageant 2024</h2>
-            <p className="text-gray-500 text-sm">Official Application</p>
+            <h2 className="text-white font-serif font-bold text-2xl">Beauty Pageant 2024</h2>
+            <p className="text-white text-sm opacity-80">Official Application</p>
           </div>
         </div>
       </header>
 
       {/* Hero Banner */}
       <div className="bg-primary text-white py-16 md:py-24 relative">
-        <div className="absolute inset-0 bg-[url('https://www.missbangladesh.com/_next/static/media/winner.1fd2cd3e.png')] bg-cover bg-center opacity-20"></div>
+      <div 
+          className="absolute inset-0 z-0 opacity-70" 
+          style={{
+            backgroundImage: `url(${Header1})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
+        {/* <div className="absolute inset-0 bg-[url('https://www.missbangladesh.com/_next/static/media/winner.1fd2cd3e.png')] bg-cover bg-center opacity-20"></div> */}
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,6 +53,15 @@ const ApplicationForm = () => {
 
       {/* Main Content */}
       <div className="py-12 md:py-20">
+      {/* <div 
+          className="absolute inset-0 z-0 opacity-20" 
+          style={{
+            backgroundImage: `url(${Header1})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div> */}
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,6 +70,7 @@ const ApplicationForm = () => {
             className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <div className="p-8 border-b">
+              
               <div className="mb-6">
                 <h2 className="text-2xl font-serif font-bold text-primary">Application Form</h2>
                 <p className="text-gray-500 mt-2">Please fill in all required fields marked with an asterisk (*)</p>

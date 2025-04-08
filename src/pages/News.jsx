@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import Header1 from '../Assets/header1.png';
 // Combined news articles from both files
 const newsArticles = [
   {
@@ -112,8 +112,17 @@ const News = () => {
   return (
     <div className="bg-amber-50 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-amber-800 text-white py-24 relative">
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-20"></div>
+      <div className="bg-amber-800 text-white py-24 relative mt-8">
+        <div 
+          className="absolute inset-0 z-0 opacity-70" 
+          style={{
+            backgroundImage: `url(${Header1})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
+        {/* <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-20"></div> */}
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
